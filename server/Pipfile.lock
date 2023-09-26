@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "75fc1fd430f3fcae97db9e5f65d00add3d963b582eb438a25cc3232e91513210"
+            "sha256": "193691c64db3c2c744222d574e2cb2b65b7ba54fd9db94fe31ac58db73c91780"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -193,16 +193,6 @@
             "markers": "python_version >= '3.8'",
             "version": "==2023.9.2"
         },
-        "gpt4all": {
-            "hashes": [
-                "sha256:7eb9855054fca82671860d07e23d62db348078ff7f8743148fb3d8067b82deb4",
-                "sha256:935a6d16f582e91821ee80ce8e39644f9d41f3467c341ea44bda6b346f0bdb2c",
-                "sha256:c65113f11d9f4106c9af5cd2716f0819df683991925a3e3e883d3a33d937434e"
-            ],
-            "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==1.0.12"
-        },
         "h11": {
             "hashes": [
                 "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d",
@@ -229,11 +219,11 @@
         },
         "huggingface-hub": {
             "hashes": [
-                "sha256:51b0257ff75b422d3cb0662db799c7a03fdc72b8f84a09ce3ff7655dca1958b2",
-                "sha256:fc4a36640b2b51dced0da37a18420572145a0dd528f46715afe6c1f955cc8533"
+                "sha256:40439632b211311f788964602bf8b0d9d6b7a2314fba4e8d67b2ce3ecea0e3fd",
+                "sha256:545eb3665f6ac587add946e73984148f2ea5c7877eac2e845549730570c1933a"
             ],
             "markers": "python_full_version >= '3.8.0'",
-            "version": "==0.17.2"
+            "version": "==0.17.3"
         },
         "hypercorn": {
             "hashes": [
@@ -278,9 +268,9 @@
         },
         "lit": {
             "hashes": [
-                "sha256:84623c9c23b6b14763d637f4e63e6b721b3446ada40bf7001d8fee70b8e77a9a"
+                "sha256:44867ae576b5790567b120bc3f0d9f021dac9424d1b0840c75acd85f4610ac04"
             ],
-            "version": "==16.0.6"
+            "version": "==17.0.1"
         },
         "markupsafe": {
             "hashes": [

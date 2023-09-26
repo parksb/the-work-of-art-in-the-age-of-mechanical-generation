@@ -8,7 +8,6 @@ diffusers = {extras = ["torch"], version = "*"}
 transformers = "*"
 hypercorn = "*"
 fastapi = "*"
-gpt4all = "*"
 
 [dev-packages]
 

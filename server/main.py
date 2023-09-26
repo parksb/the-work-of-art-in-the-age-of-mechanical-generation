@@ -2,12 +2,12 @@ from io import BytesIO
 from fastapi import FastAPI
 from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 from fastapi.responses import StreamingResponse
-from gpt4all import GPT4All
+from transformers import pipeline
 import torch
 
 app = FastAPI()
 
-llm_model = GPT4All("orca-mini-3b.ggmlv3.q4_0.bin")
+llm_pipe = pipeline("text-generation", model="Gustavosta/MagicPrompt-Stable-Diffusion")
 
 df_model_id = "stabilityai/stable-diffusion-2"
 df_scheduler = EulerDiscreteScheduler.from_pretrained(
@@ -23,9 +23,10 @@ def get_version():
     return {"version": "0.1"}
 
 
+# e.g., "Landscape of "
 @app.get("/chat")
-def chat():
-    return llm_model.generate("A painting ", max_tokens=50)
+def chat(prompt: str):
+    return llm_pipe(prompt)
 
 
 @app.get("/image")
