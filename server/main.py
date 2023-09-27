@@ -32,5 +32,5 @@ def chat(prompt: str):
 @app.get("/image")
 def get_image(prompt: str):
     bytes_io = BytesIO()
-    df_pipe(prompt, width=512, height=512).images[0].save(bytes_io, format="PNG")
+    df_pipe(prompt).images[0].save(bytes_io, format="PNG")
     return StreamingResponse(BytesIO(bytes_io.getvalue()), media_type="image/png")
