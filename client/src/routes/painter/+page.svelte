@@ -6,7 +6,7 @@
   const apiUrl = import.meta.env.VITE_API_URL;
 
   onMount(() => {
-    const audio = new Audio('/morse.mp3');
+    const audio = new Audio('/morse-1.mp3');
     audio.loop = true;
     audio.play();
 
@@ -25,15 +25,24 @@
 
 <div class="root">
   <img src={`${apiUrl}/image?p=${version}`} alt="A generated artwork" />
+  <small>No. {version + 1} (2023)</small>
 </div>
 
 <style>
   .root {
     display: flex;
+    flex-direction: column;
   }
 
   img {
+    display: block;
     width: 100%;
-    height: 100%;
+  }
+
+  small {
+    display: block;
+    color: white;
+    margin-top: 5px;
+    text-align: right;
   }
 </style>
