@@ -65,6 +65,13 @@ def image():
 def image_ready(x: int):
     f = open("generated_version", "r")
     version = int(f.readline())
+    f.close()
+
+    if abs(version - x) > 1:
+        fw = open("generated_version", "w")
+        fw.write(str(x))
+        fw.close()
+
     if version > x:
         return True
     return False

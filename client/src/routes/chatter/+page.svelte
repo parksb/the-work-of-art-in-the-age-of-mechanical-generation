@@ -3,6 +3,7 @@
 
   $: version = 0
   $: prompt = "Hello. From now on, I will freely talk about things I imagine. Please draw what I'm saying so that it can be seen with the eyes.";
+  $: indicator = "□";
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -16,6 +17,12 @@
     setTimeout(() => {}, 5000);
 
     setInterval(async () => {
+      if (indicator == "□") {
+        indicator = "■";
+      } else {
+        indicator = "□";
+      }
+
 		  const image_ready = (await (await fetch(`${apiUrl}/image_ready?x=${version}`)).text()) == 'true';
 
       if (image_ready) {
@@ -38,7 +45,7 @@
 
 <div class="root">
   <div class="label">
-    <p>{prompt}</p>
+    <p>{prompt} {indicator}</p>
   </div>
 </div>
 
