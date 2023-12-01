@@ -7,14 +7,12 @@
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
-  const materials = ["A landscape of ", "The people who ", "A building that ", "A still life depicting ", "A cityscape of ", "An oil painting depicting ", "An ink wash painting depicting ", "An abstraction of "];
+  const materials = ["A landscape of ", "An impressionism painting ", "An work of art depicting the people who ", "A neoclassical painting ", "A still life painting ", "An oil painting ", "An ink wash painting ", "An abstract painting ", "A cubism artwork ", "A surrealism painting ", "A fauvism artwork "];
 
   onMount(async () => {
     const audio = new Audio('/morse-2.mp3');
     audio.loop = true;
     audio.play();
-
-    setTimeout(() => {}, 5000);
 
     setInterval(async () => {
       if (indicator == "□") {
