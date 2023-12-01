@@ -64,7 +64,7 @@ def image():
 @app.get("/image_ready")
 def image_ready(x: int):
     f = open("generated_version", "r")
-    version = int(f.readline())
+    version = int(float(f.readline()))
     f.close()
 
     if abs(version - x) > 1:
