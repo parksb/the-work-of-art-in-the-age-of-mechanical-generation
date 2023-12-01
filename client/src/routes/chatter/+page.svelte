@@ -7,7 +7,7 @@
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
-  const materials = ["A landscape of ", "An impressionism painting ", "An work of art depicting the people who ", "A neoclassical painting ", "A still life painting ", "An oil painting ", "An ink wash painting ", "An abstract painting ", "A cubism artwork ", "A surrealism painting ", "A fauvism artwork "];
+  const materials = ["A landscape of ", "An impressionism painting ", "An work of art depicting the people who ", "A neoclassical painting ", "A still life painting ", "An oil painting ", "An ink wash painting ", "An abstract painting ", "A cubism artwork ", "A surrealism painting ", "A fauvism artwork ", "An oil painting of "];
 
   onMount(async () => {
     const audio = new Audio('/morse-2.mp3');
